@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewaort" content="width=device-width, initial-scale=1.0">
+    <title>Sakura Store</title>
+    <link rel="stylesheet" href="CSS/Store.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&family=Ephesis&display=swap" rel="stylesheet">
+
+    <style>
+
+        .enlargeable {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .enlarged-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            z-index: 1005;
+        }
+
+        .enlarged-image {
+            max-width: 250x;
+            max-height: 233px;
+            border: 2px solid white;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .enlarged-text {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            line-break: normal;
+            width: 240px;
+        }
+    </style>
+
+    
+</head>
+
+<body>
+   
+        <div class="HeadStyle"><h1>sakura</h1></div>
+
+        <div class="backdrop"></div>
+        
+        <div class="search-bar">
+            <input type="search" placeholder="" oninput="performSearch()">
+        </div>
+        
+
+        
+            <p class="search-text">بحث:</p>
+        
+        <div class="links">
+            <a href="request.html" class="B" >طلب زهور خاصة</a>
+            <a href="benefits.html" class="B" >فوائد الزهور</a>
+            <a href="information.html" class="B" >معلومات عن الزهور</a>
+            <a href="contact us.html" class="B" >تواصل معنا</a>
+            <p class="copy2">&copy;<span class="copy"> Mazen Essam</span></p>
+        </div>
+
+        
+    
+    
+
+
+<div class="imgs">
+
+    <figure class="item">
+        <img src="img/عباد الشمس.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/عباد الشمس.jpg', 'زهره عباد الشمس يُعد دوار الشمس محصول البذور الزيتية الأكثر شيوعًا في أوروبا وأمريكا الشمالية')">
+        <figcaption><span>3.00$</span><span2> - </span2>عباد الشمس</figcaption>    </figure>
+    <figure class="item">
+        <img src="img/القرنفل (2).jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/القرنفل (2).jpg', 'وردة القرنفل  تُعد وردة القرنفل (بالإنجليزية: Carnations) ثاني أشهر الأزهار المُستخدمة تجاريًّا في العالم')">
+        <figcaption><span>2.00$</span><span2> - </span2>القرنفل</figcaption>
+    </figure>    <figure class="item">
+        <img src="img/الجهنميه.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/الجهنميه.jpg', 'الاسم العلمي: الجهنميه الجهنمية تعتبر واحدة من أكثر النباتات شعبية في العالم وأكثرها زراعة وأقلها متطلبات، فهي مقاومة للجفاف، وخالية تقريباً من الأمراض، ولا يوجد لها أعداء بين الحشرات')">
+        <figcaption><span>4.00$</span><span2> - </span2>الجهنميه</figcaption>
+    </figure>    <figure class="item">
+        <img src="img/الجبسوفيليا.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/الجبسوفيليا.jpg', 'ما هو ورد الجبسوفيليا؟ يعود أصل هذه الوردة إلى أوراسيا،[١] ويبلغ عدد أنواع ورد الجبسوفيليا نحو 100 نوع، وتنمو جميعها بصورة سنوية دائمة، كما يتميّز كل منها بمظهر فريد ومميّز')">
+        <figcaption><span>3.20$</span><span2> - </span2>الجيسوفيليا</figcaption>
+    </figure>
+</div>  
+
+<div class="imgs">
+
+    <figure class="item">
+        <img src="img/ورد بلدى.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/ورد بلدى.jpg', 'الورد البلدي حيث أن ألوان الورد البلدي مميزة جدا حيث يوجد منه الورد الأبيض والأحمر والوردي، كما خالف كل من أنواعه في عدد البتلات الخاصة به فهناك أنواع تحتوي على ثلاث بتلات ونوع آخر يحتوي على خمسة')">
+        <figcaption><span>0.99$</span><span2> - </span2>الورد بلدى</figcaption>    </figure>
+    <figure class="item">
+        <img src="img/الورد الابيض.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/الورد الابيض.jpg', 'معاني الوردة البيضاء في علم النفس تُشير الورود البيضاء (بالإنجليزية: White roses) في علم النفس إلى الصفاء، والبراءة، كما أنّها تلعب دورًا في التعبير عن المشاعر، وتؤثر في الإنسان')">
+        <figcaption><span>1.20$</span><span2> - </span2>الورد الأبيض</figcaption>
+    </figure>    <figure class="item">
+        <img src="img/الورد الازرق.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/الورد الازرق.jpg', 'معاني الوردة الزرقاء تُعدّ الوردة الزرقاء من الورود النادرة، ويُعبر لونها عن العديد من الأحاسيس الجميلة والإيجابية مثل الثقة والتفاؤل وديمومة المشاعر')">
+        <figcaption><span>1.50$</span><span2> - </span2>الورد الأزرق</figcaption>
+    </figure>    <figure class="item">
+        <img src="img/روز.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/روز.jpg', 'الورد الجوري تنتمي الوردة الجورية (بالإنجليزية: Rose) إلى الفصيلة الوردية، ويقع موطنها الأصلي ضمن المناطق المعتدلة في نصف الكرة الشمالي')">
+        <figcaption><span>1.00$</span><span2> - </span2>الورد الأحمر</figcaption>
+    </figure>
+</div>
+
+<div class="imgs">
+
+    <figure class="item">
+        <img src="img/الياسمين.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/الياسمين.jpg', 'وردة الياسمين تعيش زهرة الياسمين (بالإنجليزية: Jasmine) في المناطق الاستوائية، والمناطق المعتدلة، والمناطق الدافئة، ويُعتقد أنّ أصلها يعود إلى جبال الهيمالايا غرب الصين')">
+        <figcaption><span>0.50$</span><span2> - </span2>الياسمين</figcaption>    </figure>
+    <figure class="item">
+        <img src="img/الفل.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/الفل.jpg', 'تصنيف زهرة الفل: تنتمي زهرة الفل إلى مملكة النباتات عائلة الزيتونية، وجنس الياسمين.[١]مواصفات زهرة الفل: يصل طول قطر دائرة زهرة الفل إلى 2.5 سم، وتحتوي كل زهرة على 4-9 بتلات')">
+        <figcaption><span>0.50$</span><span2> - </span2>الفل</figcaption>
+    </figure>    <figure class="item">
+        <img src="img/التوليب (1).jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/التوليب (1).jpg', 'وردة التوليب تنتمي وردة التوليب (بالإنجليزية: Tulip) إلى الفصيلة الزنبقية من جنس التوليب الذي يضم 100 نوعًا من النباتات المُزهرة، ويقع موطنها الأصلي في تركيا وآسيا الوسطى')">
+        <figcaption><span>1.79$</span><span2> - </span2>التوليب</figcaption>
+    </figure>    <figure class="item">
+        <img src="img/الهيبسكس (1).jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/الهيبسكس (1).jpg', 'نبات هيبسكس (Hibiscus) موطنه مناطق جنوب شرق آسيا مثل الصين واليابان، وكذلك شرق أفريقيا، يوجد منه حوالي 250 نوع، وهو نبات مستديم الخضرة وتتميز بنموها السريع ويمكن أن يصل ارتفاع بعض أنواعها إلى 5 أمتار، قابلة للتقليم والتشكيل وتزهر طوال العام')">
+        <figcaption><span>6.90$</span><span2> - </span2>الهيبسكس</figcaption>
+    </figure>
+</div>
+
+<div class="imgs">
+
+    <figure class="item">
+        <img src="img/زهره الفرح.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/زهره الفرح.jpg', 'نبات من فصيلة المركبات، وهي عشبة يبلغ ارتفاعها (50 ـ 120 سم) لها ساق مضلعة عارية وقليلة الفروع، والأوراق مجنحة ومسننة وتفوح منها رائحة تشبه رائحة الكافور عند هرسها')">
+        <figcaption><span>1.25$</span><span2> - </span2>زهور الفرح</figcaption>    </figure>
+    <figure class="item">
+        <img src="img/وردة البتونيا.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/وردة البتونيا.jpg', 'وردة البتونيا تُعد وردة البتونيا (بالإنجليزية: Petunias) من أكثر الأزهار شعبية في الحدائق، نظرًا لفترة ازدهارها الطويلة، وجمال أزهارها، حيث تأتي بمجموعة متنوعة من الأنماط والألوان')">
+        <figcaption><span>3.20$</span><span2> - </span2>ورد البتونيا</figcaption>
+    </figure>    <figure class="item">
+        <img src="img/البابونج.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/البابونج.jpg', 'البابونج Chamomile هو الاسم الشائع لعدد من أزهار الأقحوان، وهو من أكثر النباتات شهرة بين الناس، يستخدم في الطب البديل منذ القدم، ولا يزال شائعًا ومستخدمًا في الزمن الحالي')">
+        <figcaption><span>0.70$</span><span2> - </span2>البابونج</figcaption>
+    </figure>    <figure class="item">
+        <img src="img/اللافندر.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/اللافندر.jpg', 'اللافندرتنتمي زهرة اللافندر إلى عائلة النعناع، ويوجد حوالي 30 نوعًا منها، ويعود موطنها الأصلي إلى المناطق المطلة على البحر الأبيض المتوسط، وتنتشر زراعة زهرة اللافندر في الحدائق والبساتين')">
+        <figcaption><span>5.00$</span><span2> - </span2>اللافندر</figcaption>
+    </figure>
+</div>
+
+<div class="imgs">
+
+    <figure class="item">
+        <img src="img/جزانيا.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/جزانيا.jpg', 'الغازانيا (الاسم العلمي: Gazania) هو جنس نباتي يتبع فصيلة النجمية من رتبة النجميات. والغازانيا هي أحد أنواع النباتات المزهرة التي تتحمل الجفاف. موطنها الأصلي جنوب أفريقيا.')">
+        <figcaption><span>0.75$</span><span2> - </span2>الجزانيا</figcaption>    </figure>
+    <figure class="item">
+        <img src="img/الخشخاش.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/الخشخاش.jpg', 'الخشخاش[1] اسم قد يطلق على مجموعة من النباتات المزهرة من الفصيلة الخشخاشية. الخشخاش نباتات عشبية، وغالبًا ما تزرع لجمال ألوان أزهارها. أحد أنواع الخشخاش هو الخشخاش المنوم')">
+        <figcaption><span>2.20$</span><span2> - </span2>الخشخاش</figcaption>
+    </figure>    <figure class="item">
+        <img src="img/السوسن سبوريا.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/السوسن سبوريا.jpg', 'زهرة السوسن سبوريا هي نوع من جنس السوسن، وهو جزء من الجنس الفرعي ليمنيريس وسلسلة سبورييا. وهو نبات جذمور معمر من أوروبا وآسيا وأفريقيا. لها أزهار أرجوانية أو بنفسجية، وأوراقها رفيعة مستطيلة')">
+        <figcaption><span>7.50$</span><span2> - </span2>السوسن سبوريا</figcaption>
+    </figure>    <figure class="item">
+        <img src="img/عصفور الجنه.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/عصفور الجنه.jpg', 'زهرة عصفور الجنّة تُعدّ زهرة عصفور الجنة (بالإنجليزية: Bird of Paradise) من الزهور التي يجب زراعتها تحت أشعة الشمس المباشرة')">
+        <figcaption><span>3.25$</span><span2> - </span2>عصفور الجنه</figcaption>
+    </figure>
+</div>
+
+<div class="imgs">
+
+    <figure class="item">
+        <img src="img/الونكه.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/الونكه.jpg', 'الونكةCatharanthus roseusتُسمّى الونكة وهي نبتة معمرة خلابة. تُنتج أوراقًا كثيفة، جذّابة ومغطّاة بأزهار غزيرة تتفتّح خلال فصل الصيف وتشبه الفلوكس الصيفيّ.')">
+        <figcaption><span>0.60$</span><span2> - </span2>الونكة</figcaption>    </figure>
+    <figure class="item">
+        <img src="img/الجاردينيا.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/الجاردينيا.jpg', 'زهرة الجاردينيا تتميّز زهرة الجاردينيا (بالإنجليزية: Gardenia) برائحتها العطرية المُنتشرة، وبلونها الأبيض الكريمي، وبأوراقها الناعمة الحريرية واللامعة')">
+        <figcaption><span>4.15$</span><span2> - </span2>الجاردينيا  </figcaption>
+    </figure>    <figure class="item">
+        <img src="img/السوسن الاسود.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/السوسن الاسود.jpg', 'تعد السوسنة السوداء من أندر الأزهار في العالم، وتتميز بألوانها التي تمثل مزيجًا فريدًا جدًا من اللونين الأسود والأرجواني الداكن مع بقعة بيضاء في منتصفها، وعلى الرغم من جمال هذه الأزهار ومظهرها الرقيق الواضح')">
+        <figcaption><span>1000.00$</span><span2> - </span2>السوسن الأسود</figcaption>
+    </figure>    <figure class="item">
+        <img src="img/زهرة ألسترويمريا .jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/زهرة ألسترويمريا .jpg', 'زهرة زهرة ألسترويمريا ، وتعرف ايضا باسم زهرة بيرو ، ومعنى اسمها الثروة والازدهار ، وهى ايضا زهرة الصداقة')">
+        <figcaption><span>2.90$</span><span2> - </span2>زهور ألسترويمريا</figcaption>
+    </figure>
+</div>
+
+<div class="imgs">
+
+    <figure class="item">
+        <img src="img/غاليكا.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/غاليكا.jpg', 'يعتبر الورد الفرنسي “غاليكا ” من انواع الورد الطبيعي القديمة الغربية. يمل هذا النوع إلى إنتاج شجيرات كثيفة و مستقيمة و ذات أشواك دقيقة.')">
+        <figcaption><span>2.35$</span><span2> - </span2>غاليكا</figcaption>    </figure>
+    <figure class="item">
+        <img src="img/زهور النرجس.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/زهور النرجس.jpg', 'زهرة. النرجس لونها يميل للكبريتي وعن طريق نمو ساق مفردة قد تنمو زهرتين اثنتين منه او اكثر  ولها رائحه عطره جذابه وذات مظهر خلاب')">
+        <figcaption><span>2.30$</span><span2> - </span2>زهور النرجس</figcaption>
+    </figure>    <figure class="item">
+        <img src="img/زهور الهيدرانجا.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/زهور الهيدرانجا.jpg', 'زهرة الهيدرانجا تعد زهور الهيدرانجيا من أكثر زهور العالم جمالاً، كما يطلق عليها أيضا الكوبية، أو القرطاسية، أو الهيدرانيا ماكروفيللا، أو الهورتنسيا، أو زهرة عيد الأم')">
+        <figcaption><span>3.60$</span><span2> - </span2>زهور الهيدرانجا</figcaption>
+    </figure>    <figure class="item">
+        <img src="img/شقائق النعمان.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/شقائق النعمان.jpg', 'زهرة شقائق النعمان التي يطلق عليها أيضاً الدحنون والحنون تعيش في بلاد الشام في معظم مناطق الأردن وسوريا وفلسطين وخاصة المناطق الجبلية في الأردن وسوريا وجبال القدس والسفوح الشرقية')">
+        <figcaption> <span>4.25$</span><span2> - </span2>شقائق النعمان</figcaption>
+    </figure>
+</div>
+
+<div class="imgs">
+
+    <figure class="item">
+        <img src="img/فريسيا.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/فريسيا.jpg', 'زهرة فريسيا أحد الزهور المنتمية لجنس النبات المُزهر العُشبيّ، وبدأ تصنيفها كزهرة مستقلة في عام 1866، واكتسبت اسمها من الطبيب الفرنسي وعالم النبات “فريدريش فريز”')">
+        <figcaption><span>0.95$</span><span2> - </span2>الفريسيا</figcaption>    </figure>
+    <figure class="item">
+        <img src="img/زنبق الياقوت.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/زنبق الياقوت.jpg', 'زهرة زنبق الياقوت يُعرف الزنبق بأنه من أهم الأنواع الموجودة في النباتات بشكل عام ، وقد أطلق عليه البعض اسم زهور الحدائق أو أزهار الحديقة الشتوية')">
+        <figcaption><span>2.85$</span><span2> - </span2>زنبق الياقوت</figcaption>
+    </figure>    <figure class="item">
+        <img src="img/الاستر.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/الاستر.jpg', 'ازهار الاستر من الازهار الشعبيه المحببه لكثير من الناس لسهولة زراعتها والتعامل معاها كما انها متوفره بالوان عديده')">
+        <figcaption><span>2.65$</span><span2> - </span2>زهور الاستر</figcaption>
+    </figure id="apple">    <figure class="item">
+        <img src="img/ورده البوربون.jpg" alt="Image 1" class="enlargeable" onclick="enlargeImage('img/ورده البوربون.jpg', 'ظهرت وردة البوربون للمرة الأولى في فترة الثمانينات على جزيرة بوربون، و التي تسمّى الآن باسم ” ريونيون ” في المحيط الهادي. لها قدرة رائعة على إنتاج زهورًا كاملة كبيرة، و تتميز بالعطر الفوّاح الشديد')">
+        <figcaption><span>10.99$</span><span2> - </span2>ورد البوربون</figcaption>
+    </figure>
+
+</div>
+
+<div class="enlarged-container" id="enlarged-container">
+
+    <img src="" alt="Enlarged Image" class="enlarged-image" id="enlarged-image">
+    <div class="enlarged-text" id="enlarged-text"></div>
+
+</div>
+
+
+<script>
+
+    function enlargeImage(imageSrc, text) {
+
+        const enlargedImage = document.getElementById('enlarged-image');
+        const enlargedContainer = document.getElementById('enlarged-container');
+        const enlargedText = document.getElementById('enlarged-text');
+
+        enlargedImage.src = imageSrc;
+
+        enlargedText.innerHTML = text;
+
+        enlargedContainer.style.display = 'flex';
+
+        enlargedContainer.onclick = function () {
+
+            enlargedContainer.style.display = 'none';
+
+        };
+    }
+    
+</script>
+
+</body>
+</html>
